@@ -36,11 +36,12 @@ func initRouter() {
 }
 
 func getPort() int {
-	if port := os.Getenv("PORT"); port == "" {
+	port := os.Getenv("PORT"); 
+	if port == "" {
 		return 8000
-	} else {
-		// port should usually be valid
-		portNum, _ := strconv.Atoi(port)
-		return portNum
-	}
+	} 
+
+	portNum, _ := strconv.Atoi(port)
+	return portNum
+	
 }
