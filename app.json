@@ -1,0 +1,11 @@
+{
+  "name": "friendly-neighborhood-np",
+  "description": "Appointment application for Friendly Neighborhood NP",
+  "keywords": ["golang", "react", "heroku"],
+  "repository": "https://github.com/friendlyNeighborhoodNp/fnnp",
+  "buildpacks": [
+    {
+      "url": "heroku/go"
+    }
+  ]
+}
