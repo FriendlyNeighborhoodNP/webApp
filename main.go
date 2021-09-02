@@ -5,7 +5,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"strconv"
 	"time"
 
 	"github.com/bmw2621/fnnp/handlers"
@@ -35,13 +34,11 @@ func initRouter() {
 	log.Fatal(srv.ListenAndServe())
 }
 
-func getPort() int {
+func getPort() string {
 	port := os.Getenv("PORT"); 
 	if port == "" {
-		return 8000
+		return "80"
 	} 
-
-	portNum, _ := strconv.Atoi(port)
-	return portNum
+	return port
 	
 }
