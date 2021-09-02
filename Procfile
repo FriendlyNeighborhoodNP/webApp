@@ -1,1 +1,1 @@
-web: ./bin/fnnp
+web: bin/fnnp
