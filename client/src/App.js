@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     fetch("/api/appt")
       .then((data) => data.json())
-      .then((data) => setMyString(data.method));
+      .then((data) => setMyString(JSON.stringify(data, null, 2)));
   }, []);
 
   return (

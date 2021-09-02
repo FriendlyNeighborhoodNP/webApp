@@ -17,7 +17,7 @@ var err error
 func InitializeDB() {
 	Db, err = gorm.Open(postgres.Open(os.Getenv("DATABASE_URL")), &gorm.Config{})
 	if err != nil {
-		log.Fatalf("Error opening database connection")
+		log.Fatal("Failed to connect to database")
 	}
 
 	Db.AutoMigrate(&models.Appointment{})
