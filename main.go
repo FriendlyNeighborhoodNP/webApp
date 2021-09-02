@@ -7,13 +7,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/bmw2621/fnnp/db"
 	"github.com/bmw2621/fnnp/handlers"
 	"github.com/gorilla/mux"
 )
 
 func init() {
-	db.InitializeDB()
+	// db.InitializeDB()
 }
 
 func main() {
@@ -29,7 +28,6 @@ func initRouter() {
 	}
 
 	port := getPort()
-	fmt.Println(port)
 
 	router.PathPrefix("/").Handler(spa)
 	srv := &http.Server{

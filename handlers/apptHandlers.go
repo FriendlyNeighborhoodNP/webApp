@@ -34,7 +34,7 @@ func DeleteApptByID(w http.ResponseWriter, r *http.Request){
 	params := mux.Vars(r)
 	var appt models.Appointment
 	db.Db.Delete(&appt, params["id"])
-	json.NewEncoder(w).Encode(map[string]string{"method": "DeleteApptByID"})
+	json.NewEncoder(w).Encode(appt)
 }
 
 // UpdateApptByID handles API calls to update a record in the database

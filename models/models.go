@@ -10,7 +10,8 @@ import (
 type Appointment struct {
 	gorm.Model
 	Title 		string		`json:"title"`
-	Location 	string		`json:"location"`
+	Lat		 	float32		`json:"lat"`
+	Lon 		float32 	`json:"lon"`
 	Description	string 		`json:"description"`
 	DateTime 	time.Time 	`json:"datetime"`
 }
