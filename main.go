@@ -23,10 +23,13 @@ func initRouter() {
 		router.HandleFunc(hdlr.Endpoint, hdlr.Handler).Methods(hdlr.Method)
 	}
 
+	port := getPort()
+	fmt.Println(port)
+
 	router.PathPrefix("/").Handler(spa)
 	srv := &http.Server{
 		Handler: router,
-		Addr: fmt.Sprintf(":%v", getPort()),
+		Addr: fmt.Sprintf(":%v", port),
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout: 15 * time.Second,
 	}
@@ -37,7 +40,7 @@ func initRouter() {
 func getPort() string {
 	port := os.Getenv("PORT"); 
 	if port == "" {
-		return "80"
+		return "8000"
 	} 
 	return port
 	
