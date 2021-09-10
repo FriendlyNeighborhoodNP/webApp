@@ -25,9 +25,9 @@ const Appts = styled.div`
 const ApptLinks = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   max-height: 500px;
-  overflow-y: scroll;
+  overflow-y: auto;
 `;
 
 const Heading = styled.h2`
@@ -43,6 +43,7 @@ const ScheduleEvent = styled.a`
   font-size: 1.2rem;
   margin-bottom: 20px;
   text-decoration: none;
+  text-align: center;
   &:visited {
     color: white;
   }
@@ -99,15 +100,17 @@ const MapSection = () => {
               </ApptDescription>
             </div>
           ))}
-          <ScheduleEvent
-            onClick={() =>
-              setApptsToShow((prevState) =>
-                appointments.slice(0, prevState.length + 3)
-              )
-            }
-          >
-            Show More
-          </ScheduleEvent>
+          {appointments.length !== apptsToShow.length && (
+            <ScheduleEvent
+              onClick={() =>
+                setApptsToShow((prevState) =>
+                  appointments.slice(0, prevState.length + 3)
+                )
+              }
+            >
+              Show More
+            </ScheduleEvent>
+          )}
         </ApptLinks>
       </Appts>
     </Section>
