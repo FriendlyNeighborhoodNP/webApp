@@ -14,4 +14,5 @@ var RouterHandlers = []Handler{
 	{Endpoint: "/api/appt/{id}", Handler: DeleteApptByID, Method: "DELETE"},
 	{Endpoint: "/api/appt/{id}", Handler: UpdateApptByID, Method: "PUT"},
 	{Endpoint: "/api/appt", Handler: CreateAppt, Method: "POST"},
+	{Endpoint: "/api/auth", Handler: Authorize, Method: "POST"},
 } 
