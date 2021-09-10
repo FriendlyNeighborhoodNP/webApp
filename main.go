@@ -30,13 +30,8 @@ func initRouter() {
 
 	port := getPort()
 
-	// corsHandler := cors.New(cors.Options{
-	// 	AllowedOrigins: []string{"*"},
-	// })
-
 	router.PathPrefix("/").Handler(spa)
 	srv := &http.Server{
-		// Handler: corsHandler.Handler(router),
 		Handler: router,
 		Addr: fmt.Sprintf(":%v", port),
 		WriteTimeout: 15 * time.Second,

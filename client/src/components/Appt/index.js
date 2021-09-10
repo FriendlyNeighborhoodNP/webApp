@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import urlBase from "../../urlBase";
 
 import EventMap from "../Maps/EventMap";
 
@@ -28,7 +29,7 @@ const Appt = () => {
   const apptId = parseInt(route.pathname.slice(6));
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/appt/${apptId}`)
+    fetch(`${urlBase}/api/appt/${apptId}`)
       .then((data) => data.json())
       .then(setAppt);
   }, [apptId]);

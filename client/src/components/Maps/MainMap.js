@@ -4,7 +4,11 @@ import olFeature from "ol/Feature";
 import olPoint from "ol/geom/Point";
 import olTileLayer from "ol/layer/Tile";
 import { Style as olStyle, Icon as olIcon } from "ol/style";
-import { Vector as olVectorSource, XYZ as olXYZ } from "ol/source";
+import {
+  Vector as olVectorSource,
+  // XYZ as olXYZ,
+  Stamen as olStamen,
+} from "ol/source";
 import { fromLonLat } from "ol/proj";
 
 import mark from "../../images/mapMarker.svg";
@@ -12,10 +16,11 @@ import mark from "../../images/mapMarker.svg";
 const MainMap = ({ locations }) => {
   // Create new Basemap
   const watercolorLayer = new olTileLayer({
-    source: new olXYZ({
-      url: "http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+    source: new olStamen({
+      layer: "watercolor",
     }),
   });
+
   const onMapInit = async (map) => {
     // Remove default basemap provided by ol-kit and add watercolorLayer
     map.removeLayer(map.getLayers().getArray()[0]);
