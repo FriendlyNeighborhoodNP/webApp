@@ -2,9 +2,9 @@ import React from "react";
 import { Map, VectorLayer } from "@bayer/ol-kit";
 import olFeature from "ol/Feature";
 import olPoint from "ol/geom/Point";
-import olTileLayer from "ol/layer/Tile";
+
 import { Style as olStyle, Icon as olIcon } from "ol/style";
-import { Vector as olVectorSource, Stamen as olStamen } from "ol/source";
+import { Vector as olVectorSource } from "ol/source";
 import { fromLonLat } from "ol/proj";
 
 import mark from "../../images/mapMarker.svg";

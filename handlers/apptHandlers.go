@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"time"
 
 	"github.com/bmw2621/fnnp/db"
 	"github.com/bmw2621/fnnp/models"
@@ -15,7 +16,7 @@ func GetAppt(w http.ResponseWriter, r *http.Request){
 	w.Header().Set("Content-Type", "application/json")
 	var appts []models.Appointment
 
-	db.Db.Find(&appts)
+	db.Db.Where("date_time > ?", time.Now()).Find(&appts)
 	json.NewEncoder(w).Encode(appts)
 }
 
