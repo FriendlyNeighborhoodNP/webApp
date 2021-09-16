@@ -11,19 +11,10 @@ import mark from "../../images/mapMarker.svg";
 
 const EventMap = ({ lon, lat }) => {
   const location = [lon, lat];
-  const watercolorLayer = new olTileLayer({
-    source: new olStamen({
-      layer: "watercolor",
-    }),
-  });
 
   const onMapInit = async (map) => {
     const apptLonLat = fromLonLat(location);
     const mapView = map.getView();
-
-    // Remove default basemap provided by ol-kit and add watercolorLayer
-    map.removeLayer(map.getLayers().getArray()[0]);
-    map.addLayer(watercolorLayer);
 
     mapView.setCenter(apptLonLat);
     mapView.setZoom(15);

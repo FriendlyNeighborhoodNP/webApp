@@ -10,6 +10,7 @@ export const SectionText = styled.div`
   border-radius: 6px;
   color: ${(props) => (props.color ? props.color : "var(--grey)")};
   padding: 25px;
+  margin-bottom: 30px;
 `;
 export const Section = styled.section`
   background: ${(props) => (props.bg ? props.bg : "white")};

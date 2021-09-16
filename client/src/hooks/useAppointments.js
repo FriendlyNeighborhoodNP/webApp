@@ -5,7 +5,7 @@ const useAppointments = () => {
   const [appointments, setAppointments] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchApptointments = useCallback(() => {
+  const fetchAppointments = useCallback(() => {
     fetch(`${urlBase}/api/appt`)
       .then((data) => data.json())
       .then((data) =>
@@ -16,7 +16,7 @@ const useAppointments = () => {
       .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
-  useEffect(fetchApptointments, []);
+  useEffect(fetchAppointments, [fetchAppointments]);
 
   const deleteAppointment = async (id, token) => {
     setLoading(true);

@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.260839ae.chunk.css",
-    "main.js": "/static/js/main.83d11c55.chunk.js",
-    "main.js.map": "/static/js/main.83d11c55.chunk.js.map",
+    "main.js": "/static/js/main.2d9357be.chunk.js",
+    "main.js.map": "/static/js/main.2d9357be.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.55fe96b1.js",
     "runtime-main.js.map": "/static/js/runtime-main.55fe96b1.js.map",
-    "static/js/2.0ace31c7.chunk.js": "/static/js/2.0ace31c7.chunk.js",
-    "static/js/2.0ace31c7.chunk.js.map": "/static/js/2.0ace31c7.chunk.js.map",
+    "static/js/2.443b66db.chunk.js": "/static/js/2.443b66db.chunk.js",
+    "static/js/2.443b66db.chunk.js.map": "/static/js/2.443b66db.chunk.js.map",
     "static/js/3.a9ad9e93.chunk.js": "/static/js/3.a9ad9e93.chunk.js",
     "static/js/3.a9ad9e93.chunk.js.map": "/static/js/3.a9ad9e93.chunk.js.map",
     "static/js/4.712766e1.chunk.js": "/static/js/4.712766e1.chunk.js",
@@ -15,18 +15,20 @@
     "static/js/5.266c7b39.chunk.js.map": "/static/js/5.266c7b39.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.260839ae.chunk.css.map": "/static/css/main.260839ae.chunk.css.map",
-    "static/js/2.0ace31c7.chunk.js.LICENSE.txt": "/static/js/2.0ace31c7.chunk.js.LICENSE.txt",
+    "static/js/2.443b66db.chunk.js.LICENSE.txt": "/static/js/2.443b66db.chunk.js.LICENSE.txt",
     "static/js/3.a9ad9e93.chunk.js.LICENSE.txt": "/static/js/3.a9ad9e93.chunk.js.LICENSE.txt",
     "static/js/4.712766e1.chunk.js.LICENSE.txt": "/static/js/4.712766e1.chunk.js.LICENSE.txt",
     "static/js/5.266c7b39.chunk.js.LICENSE.txt": "/static/js/5.266c7b39.chunk.js.LICENSE.txt",
+    "static/media/amber.4723317d.jpeg": "/static/media/amber.4723317d.jpeg",
+    "static/media/coc.fb9abf42.png": "/static/media/coc.fb9abf42.png",
     "static/media/fnnp.bcc50e39.svg": "/static/media/fnnp.bcc50e39.svg",
-    "static/media/kate.02915e77.jpeg": "/static/media/kate.02915e77.jpeg",
+    "static/media/kate.3b529ea4.jpeg": "/static/media/kate.3b529ea4.jpeg",
     "static/media/mapMarker.147214f7.svg": "/static/media/mapMarker.147214f7.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.55fe96b1.js",
-    "static/js/2.0ace31c7.chunk.js",
+    "static/js/2.443b66db.chunk.js",
     "static/css/main.260839ae.chunk.css",
-    "static/js/main.83d11c55.chunk.js"
+    "static/js/main.2d9357be.chunk.js"
   ]
 }

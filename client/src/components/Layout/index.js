@@ -8,6 +8,7 @@ import {
   Menu as MenuIcon,
 } from "@material-ui/icons";
 import Logo from "../../images/fnnp.svg";
+import CoC from "../../images/coc.png";
 
 const Header = styled.header`
   width: 100%;
@@ -20,10 +21,20 @@ const Main = styled.main`
   width: 100%;
 `;
 
+const FooterSection = styled.div`
+  width: 100%;
+  background: var(--pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+`;
+
 const Footer = styled.footer`
   width: 100%;
   background: var(--pink);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 30px;
@@ -117,29 +128,37 @@ const Layout = ({ children }) => {
             <NavLink onClick={toggleMenu} to="/#about-section">
               About
             </NavLink>
-            <NavLink onClick={toggleMenu} to="/#howto-section">
-              How it Works
+            <NavLink onClick={toggleMenu} to="/#services-section">
+              Services
             </NavLink>
             <NavLink onClick={toggleMenu} to="/#covid-section">
               COVID-19 Info
             </NavLink>
-            <NavLink onClick={toggleMenu} to="/#faq-section">
-              FAQ
+            <NavLink onClick={toggleMenu} to="/#partnerships-section">
+              Partnerships
             </NavLink>
           </Nav>
         )}
       </Header>
       <Main>{children}</Main>
       <Footer>
-        <SocialLink href="https://www.facebook.com/friendlyneighborhoodnp">
-          <FacebookIcon style={{ color: "white", fontSize: "64pt" }} />
-        </SocialLink>
-        <SocialLink href="https://www.linkedin.com/in/kate-strickland-fnp-c-23064067/">
-          <LinkedInIcon style={{ color: "white", fontSize: "64pt" }} />
-        </SocialLink>
-        <SocialLink href="mailto:admin@friendlyneighborhoodnp.com">
-          <MailIcon style={{ color: "white", fontSize: "64pt" }} />
-        </SocialLink>
+        <FooterSection>
+          <SocialLink href="https://www.facebook.com/friendlyneighborhoodnp">
+            <FacebookIcon style={{ color: "white", fontSize: "64pt" }} />
+          </SocialLink>
+          <SocialLink href="https://www.linkedin.com/in/kate-strickland-fnp-c-23064067/">
+            <LinkedInIcon style={{ color: "white", fontSize: "64pt" }} />
+          </SocialLink>
+          <SocialLink href="mailto:admin@friendlyneighborhoodnp.com">
+            <MailIcon style={{ color: "white", fontSize: "64pt" }} />
+          </SocialLink>
+        </FooterSection>
+        <FooterSection>
+          <img
+            src={CoC}
+            alt="Richmond Hill Bryan County Chamber of Commerce Logo"
+          />
+        </FooterSection>
       </Footer>
     </>
   );

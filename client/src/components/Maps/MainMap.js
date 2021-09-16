@@ -1,13 +1,10 @@
 import * as React from "react";
-import { Map, VectorLayer, Controls, Popup } from "@bayer/ol-kit";
+import { Map, VectorLayer, Controls } from "@bayer/ol-kit";
 import olFeature from "ol/Feature";
 import olPoint from "ol/geom/Point";
 import olTileLayer from "ol/layer/Tile";
 import { Style as olStyle, Icon as olIcon } from "ol/style";
-import {
-  Attribution as olAttribution,
-  defaults as olDefaultControls,
-} from "ol/control";
+
 import {
   Vector as olVectorSource,
   // XYZ as olXYZ,

@@ -5,8 +5,8 @@ import { ApptContext } from "./index";
 import MapSection from "./MapSection";
 import AboutSection from "./AboutSection";
 import CovidSection from "./CovidSection";
-import HowToSection from "./HowTo";
-import FAQSection from "./FAQSection";
+import ServicesSection from "./Services";
+import PartnerSection from "./PartnerSection";
 import Loader from "../Loading";
 
 const Container = styled.div`
@@ -23,8 +23,8 @@ const Home = () => {
       {loading && <Loader />}
       <AboutSection />
       <CovidSection />
-      <HowToSection />
-      <FAQSection />
+      <ServicesSection />
+      <PartnerSection />
     </Container>
   );
 };
