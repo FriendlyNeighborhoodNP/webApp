@@ -30,4 +30,5 @@ func InitializeDB() {
 	}
 
 	Db.AutoMigrate(&models.Appointment{})
+	Db.AutoMigrate(&models.User{})
 }

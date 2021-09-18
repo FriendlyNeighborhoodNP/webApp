@@ -15,3 +15,10 @@ type Appointment struct {
 	Description	string 		`json:"description"`
 	DateTime 	time.Time 	`json:"datetime"`
 }
+
+// User struct models an user for ORM
+type User struct {
+	gorm.Model
+	Username 	string		`json:"username"`
+	Password	string		`json:"password"`
+}

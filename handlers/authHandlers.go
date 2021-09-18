@@ -3,6 +3,9 @@ package handlers
 import (
 	"encoding/json"
 	"net/http"
+
+	"github.com/bmw2621/fnnp/db"
+	"github.com/bmw2621/fnnp/models"
 )
 
 type AuthResponse struct {
@@ -10,23 +13,23 @@ type AuthResponse struct {
 	Token 	string	`json:"token"`
 }
 
-type AuthRequest struct {
-	Username 	string	`json:"username"`
-	Password 	string	`json:"password"`
-}
-
+// Authorize method checks for user in database and verifies password hash with that in database
 func Authorize(w http.ResponseWriter, r *http.Request){
 	w.Header().Set("Content-Type", "application/json")
-	var authRequest AuthRequest;
+	var authRequest models.User;
 	var authResponse AuthResponse;
 	json.NewDecoder(r.Body).Decode(&authRequest)
 
-	if authRequest.Username == "admin" && authRequest.Password == "$2a$10$SD0REGPzTsl6EaXbv.Mrh.kbHzNTen9SCh84O/iMtwJ0XM3/6PJMm"{
+	var user models.User
+
+	db.Db.Where("username = ?", authRequest.Username).First(&user)
+
+	if authRequest.Password == user.Password{
 		authResponse.Ok = false
 		authResponse.Token = ""
 	} else {
 		authResponse.Ok = true 
-		authResponse.Token = CreateToken("admin")
+		authResponse.Token = CreateToken(user.Username)
 	}
 	json.NewEncoder(w).Encode(authResponse)
 }
