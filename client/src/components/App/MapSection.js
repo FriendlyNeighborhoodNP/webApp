@@ -75,8 +75,8 @@ const MapSection = () => {
   return (
     <Section id="schedule-section">
       <Heading>Schedule</Heading>
-      <ScheduleEvent href="mailto:admin@friendlyneighborhoodnp.com">
-        Schedule Now
+      <ScheduleEvent href="https://phr.charmtracker.com/login.sas?FACILITY_ID=d1c1a0dc62345265ee4cec9bb737279d590c2dfdceee4ff12e62fe42203ae47d7a68c4657f2ee8b2">
+        Patient Portal
       </ScheduleEvent>
       <Appts>
         <MainMap locations={appointments.map((appt) => [appt.lon, appt.lat])} />
